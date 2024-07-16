@@ -1,6 +1,6 @@
 # Dev Browser Reloader
 
-Reload browser on file changes. A simple Bun websocket server that listens and sends a reload message to JS client which will trigger a `location.reload()`. Super usefull if you want to see changes made in .tsx, .jsx, html, css etc files in your 
+Reload browser on file changes. A simple Bun websocket server that watches for every file change and sends a reload message to the JS client which will trigger a `location.reload()`. Super useful if you want to see changes made in .tsx, .jsx, html, css etc files in your web project. This works with any web project (python, js, go etc). Please note that it doesn't reload your dev server.
 
 
 ## Usage
@@ -12,7 +12,7 @@ You can clone repo and build binary with:
 - [more bun compile to executable commands](https://bun.sh/docs/bundler/executables);
 
 
-But, you can also use the binary already built (checkout **Releases**). If on linux/mac do a: `sudo chmod +x devreloader` to make the binary executable. 
+But, you can also use the binary already built (checkout **Releases**). If on linux/mac do a: `sudo chmod +x devreloader` to make the binary executable. Add binary to os PATH to be able to access it anywhere.
 
 Nice, you got the websocket server figured out and running now create a file named **reload-browser.js** in your assets or public folder and add it to your main page entrypoint (index.html, base.html, index.tsx etc.) like this:
 
